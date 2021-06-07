@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     data = JSON.stringify(data);
 
-    fetch(`http://127.0.0.1:5000/users/`, {
+    fetch(`http://127.0.0.1:5000/companies/`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -20,8 +20,8 @@ document.addEventListener("DOMContentLoaded", function () {
       .then((response) => {
         if (response["message"] != "success") {
           return modal(response["message"]);
-        } else if (response["message"] == "success"){
-          return modal2("Successfully registered");
+        } else if (response["message"] == "success") {
+          return modal2("Succesfully registered");
         }
       });
   });

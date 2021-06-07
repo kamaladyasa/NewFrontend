@@ -1,0 +1,13 @@
+.edit-form {
+  width: 50%;
+  margin: 2% 25%;
+  padding-top: 40px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+.register-form h4 {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.itemform {
+  padding: 50px 200px;
+}

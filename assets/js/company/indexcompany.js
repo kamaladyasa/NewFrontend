@@ -1,19 +1,17 @@
 document.addEventListener('DOMContentLoaded', function () {
-
   fetch('http://127.0.0.1:5000/users/job-lists/')
     .then((res) => res.json())
     .then((data) => {
-      console.log(data);
       let joblists = '';
       data.forEach(function (post) {
         joblists += `
           <div class="single-job-items mb-30">
             <div class="job-items">
                 <div class="company-img">
-                    <a href="job_details.html?id=${post.id}"><img src="/assets/img/company_logo/${post.company.company_name}.jpeg" style="width: 80px;"></a>
+                    <a href="job.html?id=${post.id}"><img src="/assets/img/company_logo/${post.company.company_name}.jpeg" style="width: 80px;"></a>
                 </div>
                 <div class="job-tittle">
-                    <a href="job_details.html?id=${post.id}">
+                    <a href="job.html?id=${post.id}">
                       <h4>Digital Marketer</h4>
                     </a>
                     <ul>
@@ -27,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 </div>
             </div>
             <div class="items-link f-right">
-                <a href="job_details.html?id=${post.id}">Read More</a>
+                <a href="job.html?id=${post.id}">Read More</a>
                 <span>7 hours ago</span>
             </div>
           </div>
@@ -35,11 +33,11 @@ document.addEventListener('DOMContentLoaded', function () {
       });
       document.getElementById('joblists').innerHTML = joblists;
     });
-  
-    const logout = document.querySelector("#signout");
-    logout.addEventListener("click", (e) => {
-      e.preventDefault();
-      delete localStorage.email;
-      window.location.href = "/index.html";
-    });
+
+  const logout = document.querySelector("#signout");
+  logout.addEventListener("click", (e) => {
+    e.preventDefault();
+    delete localStorage.email;
+    window.location.href = "/index.html";
+  });
 })

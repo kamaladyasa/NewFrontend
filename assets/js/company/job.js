@@ -55,45 +55,5 @@ document.addEventListener("DOMContentLoaded", function () {
       logocomp.innerHTML = `<img src="/assets/img/company_logo/${res.company.company_name}.jpeg" style="width:80px;"></img>`;
     });
 
-  const applyBtn = document.querySelector("#applybtn");
-  applyBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    let data = {
-      job_post_id : q,
-    }
-    data = JSON.stringify(data);
-
-    fetch(`http://127.0.0.1:5000/users/apply-job/`, {
-      method: "POST",
-      headers: head,
-      body: data,
-      credentials: "same-origin",
-    })
-      .then((response) => response.json())
-      .then((response) => {
-        if (response["messages"] == "Success apply job") {
-          return modal("Successfully applied")
-        } else {
-          return modal2(response["messages"]);
-        }
-
-      });
-  });
 
 });
-function modal(text) {
-  const modalText = document.querySelector(".modal-body p");
-  modalText.innerHTML = text;
-
-  // Jquery
-  $("#my-modal").modal("show");
-  // Jquery
-};
-function modal2(txt) {
-  const modalTxt = document.querySelector("#bdy p");
-  modalTxt.innerHTML = txt;
-
-  // Jquery
-  $("#modal2").modal("show");
-  // Jquery
-};

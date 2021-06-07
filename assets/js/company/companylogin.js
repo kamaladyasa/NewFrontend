@@ -1,5 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+  const editBtn = document.querySelector("#signupbtn");
+  editBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    window.location.href = "/company/registercompany.html";
+  });
+
   const loginBtn = document.querySelector("#loginbtn");
   loginBtn.addEventListener("click", (e) => {
     e.preventDefault();
@@ -18,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
       Authorization: auth,
     };
 
-    fetch(`http://127.0.0.1:5000/user/login/`, {
+    fetch(`http://127.0.0.1:5000/company/login/`, {
       method: "POST",
       headers: head,
       credentials: "same-origin",
@@ -28,14 +34,11 @@ document.addEventListener("DOMContentLoaded", function () {
         if (response["message"] != "success") {
           return modal(response["error"]);
         }
-
         localStorage.email = response["email"];
-        window.location.href = "/user/indexuser.html";
-
+        window.location.href = "/company/indexcompany.html";
       });
   });
 });
-
 function modal(text) {
   const modalText = document.querySelector(".modal-body p");
   modalText.innerHTML = text;

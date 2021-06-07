@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
           </div>
           <div class="items-link items-link2 f-right">
-            <a href="job_details.html?id=${post.id}">Read More</a>
+            <a href="job.html?id=${post.id}">Read More</a>
             <span>7 hours ago</span>
           </div>
         </div>
@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
           </div>
           <div class="items-link items-link2 f-right">
-            <a href="job_details.html?id=${post.id}">Read More</a>
+            <a href="job.html?id=${post.id}">Read More</a>
             <span>7 hours ago</span>
           </div>
         </div>

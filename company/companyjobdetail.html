@@ -10,6 +10,8 @@
   <link rel="shortcut icon" type="image/x-icon" href="/assets/img/logo/logo2.png">
 
   <!-- CSS here -->
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css">
   <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
   <link rel="stylesheet" href="/assets/css/flaticon.css">
@@ -23,7 +25,7 @@
   <link rel="stylesheet" href="/assets/css/nice-select.css">
   <link rel="stylesheet" href="/assets/css/style.css">
 
-  <link rel="stylesheet" href="/assets/css/user/userlogin.css">
+  <link rel="stylesheet" href="/assets/css/company/companyjobdetail.css">
 </head>
 
 <body>
@@ -39,77 +41,109 @@
     </div>
   </div>
   <!-- Preloader Start -->
-  <!-- Header Start -->
-  <div class="header-area header-transparrent">
-    <div class="headder-top header-sticky">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-12">
-            <!-- Logo -->
-            <div class="logo text-center">
-              <a href="/index.html"><img src="/assets/img/logo/logotext.png" width="210" height="60" alt=""></a>
+  <header>
+    <!-- Header Start -->
+    <div class="header-area header-transparrent">
+      <div class="headder-top header-sticky">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-lg-3 col-md-2">
+              <!-- Logo -->
+              <div class="logo">
+                <a href="indexcompany.html"><img src="/assets/img/logo/logotext.png" width="210" height="60" alt=""></a>
+              </div>
+            </div>
+            <div class="col-lg-9 col-md-9">
+              <div class="menu-wrapper">
+                <!-- Main-menu -->
+                <div class="main-menu ml-auto">
+                  <nav class="d-none d-lg-block">
+                    <ul id="navigation">
+                      <li><a href="indexcompany.html">Home</a></li>
+                      <li><a href="findjobcompany.html">Find Jobs</a></li>
+                      <li><a href="profilecompany.html">Company Profile</a></li>
+                      <li><a href="#" id="signout">Logout</a></li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- Header End -->
+    <!-- Header End -->
   </header>
-
-  <!-- Body -->
   <main>
-    <div class="login-form">
-      <img class="image" src="/assets/img/logo/ava.png">
-      <h4 class="text-center">Sign in</h4>
 
-      <form id="formlogin">
-        <div class="form-group">
-          <label>Email</label>
-          <input type="email" class="form-control" name="email">
+    <!-- job post company Start -->
+    <div class="job-post-company pt-60 pb-120">
+      <div class="container">
+        <div class="row justify-content-between">
+          <!-- Left Content -->
+          <div class="col-lg-7">
+
+            <div class="job-post-details">
+              <div class="post-details1 mb-50">
+                <!-- Small Section Tittle -->
+                <div class="small-section-tittle">
+                  <h3>List of Aplicant</h3><br>
+                  <div id="userapp">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- Right Content -->
+          <div class="col-xl-5 col-lg-5">
+            <div class="post-details3  mb-20">
+              <!-- Small Section Tittle -->
+              <div class="small-section-tittle">
+                <h3>Job Overview</h3><br>
+              </div>
+              <div class="row">
+                <div class="col-md-4">
+                  <p>Total Applicant</p>
+                  <p>Posted Date</p>
+                  <p>Title</p>
+                  <p>Specialization</p>
+                  <p>Location</p>
+                  <p>Salary</p>
+                  <p>Job Description</p>
+                </div>
+                <div class="col-md-8">
+                  <p>: <span id="applicant"></span></p>
+                  <p>: <span id="date"></span></p>
+                  <p>: <span id="title"></span></p>
+                  <p>: <span id="specialization"></span></p>
+                  <p>: <span id="location"></span></p>
+                  <p>: <span id="salary"></span></p>
+                  <p>: <span id="desc"></span></p>
+                </div>
+              </div>
+            </div>
+            <div class="post-details4  mb-50">
+              <!-- Small Section Tittle -->
+              <div class="small-section-tittle">
+                <h4>Company Information</h4>
+              </div>
+              <span id="company"></span>
+              <p id="profile"></p>
+              <ul>
+                <li>Name: <span id="comp"> </span></li>
+                <li>Web : <span id="web"></span></li>
+                <li>Email: <span id="mail"></span></li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div class="form-group">
-          <label>Password</label>
-          <input type="password" class="form-control" name="password">
-        </div>
-        <button class="text-center" type="submit" id="loginbtn">Sign in</button>
-      </form>
-      <div class="register">
-        <p>Don't have an account?
-          <a href="registeruser.html">Sign up</a>
-        </p>
       </div>
     </div>
-
-    <!-- Modal -->
-    <div class="modal fade" id="my-modal" tabindex="-1">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">
-              Error
-            </h5>
-          </div>
-          <div class="modal-body">
-            <p>
-
-            </p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-danger" data-dismiss="modal">
-              <i class="bi bi-x-lg"></i>
-              Close
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Modal -->
-
+    <!-- job post company End -->
 
   </main>
-  <!-- Body -->
-
   <footer>
     <!-- Footer Start-->
     <div class="footer-area footer-bg footer-padding">
@@ -121,8 +155,8 @@
                 <div class="footer-tittle">
                   <h4>About Us</h4>
                   <div class="footer-pera">
-                    <p>Job Search bekerja sama dengan Kementerian Ketenagakerjaan Republik Indonesia dalam menyediakan
-                      lowongan pekerjaan bagi masyarakat.</p>
+                    <p>Job Search bekerja sama dengan Kementerian Ketenagakerjaan Republik Indonesia
+                      dalam menyediakan lowongan pekerjaan bagi masyarakat.</p>
                   </div>
                 </div>
               </div>
@@ -223,7 +257,7 @@
   <script src="/assets/js/main.js"></script>
 
   <!-- add js -->
-  <script src="/assets/js/user/userlogin.js"></script>
+  <script src="/assets/js/company/companyjobdetail.js"></script>
 </body>
 
 </html>

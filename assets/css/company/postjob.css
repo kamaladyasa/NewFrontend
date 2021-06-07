@@ -1,0 +1,19 @@
+.post-form {
+  width: 50%;
+  margin: 2% 20%;
+  padding-top: 40px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+.itemform {
+  padding-bottom: 50px;
+  padding-top: 20px;
+  padding-left: 200px;
+  padding-right: 200px;
+}
+#postbtn {
+  padding: 5px 150px;
+  margin: auto;
+  background-color: #ff961a;
+  border: none;
+  border-radius: 4px;
+}
